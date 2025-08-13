@@ -1,0 +1,14 @@
+[behavior]
+always-show-numbers=false
+indicator-style='workspaces-bar'
+scroll-wheel='disabled'
+smart-workspace-names=false
+toggle-overview=false
+
+[shortcuts]
+activate-empty-key=@as []
+activate-previous-key=@as []
+enable-activate-workspace-shortcuts=false
+move-workspace-left=@as []
+move-workspace-right=@as []
+open-menu=@as []
