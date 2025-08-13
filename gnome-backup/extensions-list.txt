@@ -1,0 +1,10 @@
+appindicatorsupport@rgcjonas.gmail.com
+auto-move-windows@gnome-shell-extensions.gcampax.github.com
+clipboard-indicator@tudmotu.com
+dash-to-dock@micxgx.gmail.com
+forge@jmmaranan.com
+grand-theft-focus@zalckos.github.com
+lockkeys@vaina.lt
+RemoveAppMenu@Dragon8oy.com
+space-bar@luchrioh
+ssm-gnome@lgiki.net

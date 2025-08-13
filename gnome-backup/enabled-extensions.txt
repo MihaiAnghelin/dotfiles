@@ -1,0 +1,1 @@
+['auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'clipboard-indicator@tudmotu.com', 'dash-to-dock@micxgx.gmail.com', 'forge@jmmaranan.com', 'grand-theft-focus@zalckos.github.com', 'lockkeys@vaina.lt', 'RemoveAppMenu@Dragon8oy.com', 'ssm-gnome@lgiki.net', 'space-bar@luchrioh']
