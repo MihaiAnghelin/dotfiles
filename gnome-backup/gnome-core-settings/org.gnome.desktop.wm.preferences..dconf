@@ -1,0 +1,4 @@
+[/]
+button-layout='appmenu:minimize,close'
+focus-mode='click'
+workspace-names=['Work', 'Git', 'Spotify', 'Chat']
