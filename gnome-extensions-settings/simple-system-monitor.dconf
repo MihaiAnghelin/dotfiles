@@ -1,0 +1,17 @@
+[/]
+cpu-usage-text='CPU'
+download-speed-text='↓'
+extension-order=1
+extension-position='left'
+font-weight=700
+is-cpu-usage-enable=true
+is-download-speed-enable=false
+is-memory-usage-enable=true
+is-upload-speed-enable=false
+item-separator=' | '
+memory-usage-text='RAM'
+refresh-interval=1
+show-extra-spaces=true
+show-percent-sign=true
+swap-usage-text='S'
+upload-speed-text='↑'
