@@ -5,6 +5,6 @@ dash-to-dock@micxgx.gmail.com
 forge@jmmaranan.com
 grand-theft-focus@zalckos.github.com
 lockkeys@vaina.lt
-RemoveAppMenu@Dragon8oy.com
+Resource_Monitor@Ory0n
 space-bar@luchrioh
-ssm-gnome@lgiki.net
+waylandorx11@injcristianrojas.github.com

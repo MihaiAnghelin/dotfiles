@@ -1,5 +1,5 @@
 [/]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 help=@as []
 magnifier=@as []
 magnifier-zoom-in=@as []
@@ -10,3 +10,8 @@ screenreader=@as []
 binding='<Super>Return'
 command='alacritty'
 name='Alacritty'
+
+[custom-keybindings/custom1]
+binding='<Control>space'
+command='ulauncher-toggle'
+name='Ulauncher'

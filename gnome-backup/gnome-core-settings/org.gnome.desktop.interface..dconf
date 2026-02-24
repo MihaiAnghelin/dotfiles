@@ -1,4 +1,6 @@
 [/]
+accent-color='blue'
+clock-format='24h'
 clock-show-seconds=true
 clock-show-weekday=true
 color-scheme='prefer-dark'
@@ -7,3 +9,4 @@ font-antialiasing='grayscale'
 font-hinting='slight'
 gtk-enable-primary-paste=false
 gtk-theme='Adwaita-dark'
+toolkit-accessibility=true

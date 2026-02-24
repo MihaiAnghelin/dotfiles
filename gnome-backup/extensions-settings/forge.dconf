@@ -1,13 +1,16 @@
 [/]
+auto-split-enabled=false
 css-last-update=uint32 37
 css-updated='1755043093152'
-preview-hint-enabled=false
+dnd-center-layout='swap'
+preview-hint-enabled=true
 stacked-tiling-mode-enabled=false
 tabbed-tiling-mode-enabled=false
 tiling-mode-enabled=true
 window-gap-hidden-on-single=false
-window-gap-size=uint32 3
+window-gap-size=uint32 2
 window-gap-size-increment=uint32 1
+window-overrides-reload-trigger=uint32 1771948895
 
 [keybindings]
 con-split-horizontal=@as []
