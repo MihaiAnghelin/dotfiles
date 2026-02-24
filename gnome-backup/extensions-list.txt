@@ -6,5 +6,6 @@ forge@jmmaranan.com
 grand-theft-focus@zalckos.github.com
 lockkeys@vaina.lt
 Resource_Monitor@Ory0n
+solaar-extension@sidevesh
 space-bar@luchrioh
 waylandorx11@injcristianrojas.github.com

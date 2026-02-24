@@ -2,6 +2,17 @@
 
 echo "Starting Zsh setup..."
 
+# --- Prerequisites ---
+if ! command -v git &> /dev/null; then
+    echo "ERROR: git is not installed. Please install git first."
+    exit 1
+fi
+
+if ! command -v zsh &> /dev/null; then
+    echo "ERROR: zsh is not installed. Please install it with: sudo apt install zsh"
+    exit 1
+fi
+
 # --- Part 1: Install Oh My Zsh ---
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo "-> Installing Oh My Zsh..."
@@ -59,7 +70,13 @@ fi
 echo "   - Creating symlink from $DOTFILES_ZSHRC to $HOME_ZSHRC"
 ln -s "$DOTFILES_ZSHRC" "$HOME_ZSHRC"
 
-
 echo ""
 echo "Zsh setup complete."
 echo "Please restart your terminal or run 'source ~/.zshrc' to apply changes."
+
+# Remind to change default shell if needed
+if [ "$SHELL" != "$(which zsh)" ]; then
+    echo ""
+    echo "NOTE: Your default shell is still $SHELL."
+    echo "Change it to zsh with: chsh -s $(which zsh)"
+fi

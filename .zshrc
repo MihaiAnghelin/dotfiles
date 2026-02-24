@@ -38,6 +38,7 @@ ANACONDA_INSTALL_PATH="/opt/anaconda/bin"
 # Force Electron apps to use native Wayland
 export ELECTRON_OZONE_PLATFORM_HINT=wayland
 
+# AMD GPU / ROCm
 export HSA_OVERRIDE_GFX_VERSION=10.3.0
 export AMD_SERIALIZE_KERNEL=3
 export PATH=$PATH:/opt/rocm/bin
@@ -46,25 +47,27 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export PATH="$HOME/VMs/quickemu:$PATH"
 
-export PATH="$HOME/VMs/quickemu:$PATH"export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/mihai/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/mihai/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/Downloads/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/Downloads/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/mihai/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/mihai/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc"; fi
+
 export JAVA_HOME=/usr/lib/jvm/temurin-25-jdk-amd64
 
 # opencode
-export PATH=/home/mihai/.opencode/bin:$PATH
+export PATH="$HOME/.opencode/bin:$PATH"
 
 alias orca-slicer="flatpak run com.softfever.OrcaSlicer"
 
 # Override oh-my-zsh git plugin alias to use GitKraken CLI
 unalias gk 2>/dev/null
-alias gk='/usr/bin/gk'export PATH=$PATH:/opt/rocm/bin
-export PATH=$PATH:/opt/rocm/bin
+alias gk='/usr/bin/gk'

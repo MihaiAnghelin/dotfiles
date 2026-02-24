@@ -1,4 +1,13 @@
 #!/bin/bash
+set -euo pipefail
+
+# Check required tools
+for cmd in dconf gsettings; do
+    if ! command -v "$cmd" &> /dev/null; then
+        echo "ERROR: '$cmd' is not installed."
+        exit 1
+    fi
+done
 
 # The directory where all GNOME backup data will be stored
 BACKUP_DIR="$HOME/dotfiles/gnome-backup"
@@ -27,7 +36,7 @@ for ext in $(dconf list /org/gnome/shell/extensions/); do
     EXT_NAME=$(basename "$ext")
     DCONF_PATH="/org/gnome/shell/extensions/$ext"
     OUTPUT_FILE="$EXT_SETTINGS_DIR/$EXT_NAME.dconf"
-    
+
     echo "   - Backing up settings for $EXT_NAME"
     dconf dump "$DCONF_PATH" > "$OUTPUT_FILE"
 done
@@ -35,16 +44,16 @@ done
 # --- Part 4: Backup Core GNOME & Tweaks Settings ---
 echo "-> Backing up core GNOME settings (Tweaks, Shortcuts, etc.)..."
 DCONF_PATHS=(
-    "/org/gnome/desktop/interface/" # GTK theme, icons, fonts, etc.
-    "/org/gnome/desktop/wm/preferences/" # Window titlebar buttons, etc.
-    "/org/gnome/desktop/wm/keybindings/" # Window manager keyboard shortcuts
-    "/org/gnome/settings-daemon/plugins/media-keys/" # Media keys and custom shortcuts
-    "/org/gnome/desktop/background/" # Wallpaper settings
-    "/org/gnome/desktop/peripherals/" # Mouse, touchpad, and keyboard settings
+    "/org/gnome/desktop/interface/"
+    "/org/gnome/desktop/wm/preferences/"
+    "/org/gnome/desktop/wm/keybindings/"
+    "/org/gnome/settings-daemon/plugins/media-keys/"
+    "/org/gnome/desktop/background/"
+    "/org/gnome/desktop/peripherals/"
 )
 for path in "${DCONF_PATHS[@]}"; do
-    # Create a valid filename from the dconf path (e.g., /org/gnome/ -> org.gnome.dconf)
-    filename=$(echo "$path" | sed 's/^\///; s/\//./g').dconf
+    # Create a valid filename: /org/gnome/desktop/interface/ -> org.gnome.desktop.interface.dconf
+    filename=$(echo "$path" | sed 's/^\///; s/\/$//; s/\//./g').dconf
     echo "   - Saving settings for $path"
     dconf dump "$path" > "$GNOME_SETTINGS_DIR/$filename"
 done
